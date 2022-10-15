@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="stylesheet" href="style.css">     <link rel="shortcut icon" href="./todo-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body> <div class="blur-page">
+    <div class="main">
+        <div class="bar">
+            <h1 style="font-size:42px ;">Task <span style="color: blue;"> List</span></h1>
+        </div>
+        <div class="btn">
+        <i class="fa-solid fa-circle-plus symbol"></i><span class="add"> Add New Task </span>
+        
+        </div>
+        <div>
+            <div class="parent">
+            <div class="box">
+               <h2>Trip to Paris</h2> <hr>
+               <input type="checkbox">Visit Garden <br>
+               <input type="checkbox">Shoping
+            </div>
+            <div class="box">
+                <h2>My To Do List</h2> <hr>
+                <input type="checkbox">Visit supermarket <br>
+                <input type="checkbox">Buy Vegetables
+            </div>
+            <div class="box">
+                <h2>Movie I Will Watch</h2><hr>
+                <input type="checkbox">Sranger Things 4 <br>
+                <input type="checkbox">Avengers Endgame
+            </div>
+            </div>
+            <div class="child">
+                <div class="box">
+                    <h2>Daily Morning Routine For...</h2><hr>
+                    <input type="checkbox">Wake up at 6 AM <br>
+                    <input type="checkbox">Sleep at 10 PM
+                </div>
+                <div class="box">
+                    <h2>Books to Read</h2><hr>
+                    <input type="checkbox">Design Of Everyday <br>
+                    <input type="checkbox">Alchemist
+                </div>
+            </div>
+        </div>
+        
+        </div>
+            </div> <div id="popup">
+                <div id="add-cross">
+                    <div id="popup-add">
+                        <h2>Add new task</h2>
+                    </div>
+                    <div id="popup-cross">
+                        <a href="index.html"><i class="fa fa-close" style="font-size:24px"></i></a>
+                    </div>
+                </div>
+                <hr>
+                <center>
+                    <textarea name="text" placeholder="Learn c++" id="popup-text"></textarea>
+                </center>
+                <div>
+                    <button id="popup-button">+ ADD TASK</button>
+                </div>
+            </div>
+</body>
+</html>

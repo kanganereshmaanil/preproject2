@@ -1,173 +1,163 @@
-.symbol{
-    font-size: 30px;
-    color: blue;
+*{
+    margin: 0px;
+    padding: 0px;
 }
-.add{
-    font-size: 25px;
-    
+/* Main body */
+#main{
+    height: 1000px;
+    background-color:#f7f7f7 ;
+    border: 2px solid #e6e6e6;
 }
-.box{height: 200px;
-    width: 230px;
+/* Task List */
+nav{
+    display: flex;
+    align-items: center;
+    height: 94px;
+    padding: 1rem 10rem;
+    background-color: white;
+    box-shadow:0px 5px 10px #e6e6e6;
+}
+/* Add New Button */
+#add_new{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 5rem 2rem 1rem;
+}
+#add_new_text{
+    display: flex;
+    align-items: center;
+}
+/* Body Container */
+#con_box{
+    display: flex;
+    justify-content: center;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+
+/* Boxes */
+.box{
+    height: 270px;
+    width: 300px;
     padding: 2rem;
     margin: 10px;
-    background-color: white;
-border: 1px solid white; border-radius: 20px;
+    background-color:white ;
+}
+.box:hover{
+    box-shadow:0.5px 0.5px 30px #00A5EC,-0.5px 0.5px 5px #00A5EC;
+}
+.box hr{
+    color: #e6e6e6;
 }
 .box h2{
-    color: blue;
+    color: #00A5EC;
+    font-size: 23px;
+    margin: 20px 5px;
 }
-.c_box{
-    color: #424242;
+.c_box1{ 
+    accent-color: gray;
+    transform:scale(1.5); 
+    margin-left:0.5rem;
 }
-
-.parent{
-    display: flex;
-    flex-wrap: wrap;
+.c_box2{
+    transform: scale(1.5);
+    margin-left:0.5rem;
 }
-.child{
-    display: flex;
-    flex-wrap: wrap;
+.box span{
+ display: inline-block;
+ margin: 20px 5px;
 }
-.main{
-    width: 1000px;
-     height: 800px; 
-     position: relative; 
-      background-color: aquamarine; 
-      left: 15%;
-      border: 1px solid white;
-} 
-.btn{ 
-     position: relative;
-      left: 70%;
-       margin: 10px;
-      }  
-      .bar{
-         height: 70px;
-          position: relative; 
-          left: 0%;
-           background-color: honeydew;
-            padding-left: 20px;
-        } 
-        .blur-page {
-    filter: brightness(30%);
+.sp{
+    font-size: 21px;
+    color:gray;
+    text-decoration: line-through;
 }
-#popup {
-    height: 250px;
-    width: 500px;
-    border: 0px solid blue;
-    border-radius: 15px;
-    background-color: white;
-    color: #424242;
-    box-shadow: 4px 4px 4px black, -4px -4px 4px black;
+.sp1{
+    font-size: 21px;
+}
+/* Overlay */
+#overlay{
     position: absolute;
-    top: 35%;
-    left: 25%;
-
+    bottom: 50%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 5;
 }
+/* Popup box Second and Fourth Page  */
 
-#add-cross {
-    height: 60px;
-}
-
-#popup-add {
-    float: left;
-    margin-left: 20px;
-}
-
-#popup-cross {
-    float: right;
-}
-
-#popup-text {
-    height: 20px;
-    width: 450px;
-    margin-top: 40px;
-}
-   
-#popup-button {
-    float: right;
-    border: 0px;
-    height: 25px;
-    width: 100px;
-    margin-top: 40px;
-    margin-right: 40px;
+#pop_box{
+    position: fixed;
+    width: 30%;
     border-radius: 10px;
-    color: #FFFFFF;
-    background-color: #00A5EC;
-
-}
-
-#popup-button:hover {
-    color: whitesmoke;
-    background-color: blueviolet;
-}
-//third page  
-.main3{top: 0px;
-    left: 0px;
-    width: 1366px;
-    height: 769px;
-    /* UI Properties */
-    background-color: #00A5EC;
-    
-    opacity: 1;}
-    
-    .first{ top: 0px;
-    left: 0px;
-    width: 1000px;
-    height: 94px;
-    /* UI Properties */
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 30px #7B7B7B29;
-
-
-    opacity: 1;} 
-    
-    .imp{top: 23px;
-        left: 75px;
-        width: 196px;
-        height: 49px;
-        /* UI Properties */
-        text-align: left;
-        font: normal normal bold 40px/49px Inter;
-        letter-spacing: 0px;
-        background-color: azure;
-        opacity: 1;}
-
-        .black{
-        
-            font-size: 25px;
-        }
-        .back{
-            font-size: 25px;
-            color: black;
-            
-        }
-#right{
-    position: relative;
-    right:20%;
-}
-
-
-
-        .rap{
-            display: flex;
-            flex-wrap: nowrap;
-            margin: 20px;
-            left: 35%;
-            position: relative;
-            padding: 5px;
-        }
-        .line{
-            text-decoration: line-through;
-        }
-        .box-last{
-            height: 200px;
-    width: 250px;
-    padding: 2rem;
-    margin: 20px;
     background-color: white;
-border: 3px solid gray;
- border-radius: 20px;
- position: relative;
- left: 25%;
-        }
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#close{
+    float:right;
+    padding:1rem;
+    cursor: default;
+}
+#p_top{
+    grid-column: 1/-1;
+    align-items: center;
+}
+#p_mid{
+    grid-column: 1/-1;
+    margin: 0px 1rem;
+    align-items: center;
+}
+#p_mid input{
+    width: 100%;
+    padding: 4px;
+    padding-right: 0px;
+    color: black;
+    background-color: #c2c2c2;
+    border: 1px solid #c2c2c2;
+    border-radius: 2px;
+}
+#p_bottom{
+    grid-column: 5/5;
+    align-items: center;
+}
+#p_bottom input{
+    color: white;
+    background-color: #00A5EC;
+    border: 1px solid #00A5EC;
+    border-radius: 3px;
+    padding: 0.5rem;
+    width: 7rem;
+    margin-right: 20px;
+}
+/* ----------------------------------------------------Add and Back Button Third and FourthPage----------------------------------------- */
+#add_back{
+    
+    display: flex;
+    margin: 36px 0px;
+    height: 62px;
+    justify-content: center;
+}
+
+.btn{
+    display: inline-block;
+    margin: 0px 5rem;
+}
+#box{
+    height: 13rem;
+    width: 23rem;
+    padding: 2rem;
+    margin: 10px;
+    background-color:white;
+    box-shadow:0.5px 0.5px 10px #00A5EC,-0.5px -0.5px 10px #00A5EC;
+}
+#con_3{
+    display: flex;
+    justify-content: center;
+}
